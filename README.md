@@ -33,10 +33,11 @@ slack_slash_command_lambda
     - 예를 들어 `/test` 라는 명령어는 `src/commands/test.js` 파일에 `work` 함수로 구현한다
 - 람다 환경 변수
   - 설정과 같은 외부 정보를 저장하는데 활용한다
-  - 토큰 검사를 위해 `slack_slash_command_token` 에 슬랙 토큰 값을 넣는다
+    - 코드 내에서 `process.env.이름` 으로 접근한다
+      - `process.env.slack_slash_command_token`
+  - 검사를 위해 `slack_slash_command_token` 에 슬랙의 토큰 값을 넣는다
+    - 토큰 값은 해당 명령어의 설정에서 찾을 수 있다
     - [참고](./img/lambda_env.jpg)
-  - `process.env.이름` 처럼 같이 접근한다
-    - `process.env.slack_slash_command_token`
 - Cold Start 방지
   - 대부분의 람다 호출이 Cold Start 로 실행될 가능성이 높다
     - 자원을 할당 받는 시간만큼 명령 응답이 늦어진다
