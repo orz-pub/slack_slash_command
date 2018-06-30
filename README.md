@@ -31,7 +31,7 @@ API Gateway 생성
 
 slack_slash_command_lambda
 --------------------------
-- 구현은 `Node.js` 를 이용하였다
+- 구현은 `Node.js` 로 하였다
 - `app.js`
   - `src/commands` 아래에 슬랙 명령어를 이름으로 하는 `js` 파일의 `work` 함수를 호출한다
     - 예를 들어 `/test` 라는 명령어는 `src/commands/test.js` 파일에 `work` 함수로 구현한다
@@ -48,3 +48,5 @@ slack_slash_command_lambda
     - 입력 `json` 에 `"from_cloud_watch": true` 를 추가하여, 슬랙이 아닌 AWS 의 Event 임을 알린다
       - `{ "from_cloud_watch": true }`
     - [참고](./img/cloudwatch_event.jpg)
+- 메시지 포멧
+  - 원하는 모양의 결과를 얻으려면 슬랙의 메시지 포멧을 [참고](https://api.slack.com/docs/messages)하면 된다
