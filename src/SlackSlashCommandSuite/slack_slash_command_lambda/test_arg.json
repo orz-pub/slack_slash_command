@@ -1,0 +1,13 @@
+﻿{
+  "token": "testtoken",
+  "team_id": "TEAMID123",
+  "team_domain": "test",
+  "channel_id": "TESTCHID",
+  "channel_name": "test_channel",
+  "user_id": "TESTUSERID",
+  "user_name": "bwv21",
+  "command": "/test",
+  "text": "arg",
+  "response_url": "https://hooks.slack.com/commands/TEST/TEST",
+  "local_test": true
+}
