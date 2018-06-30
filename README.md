@@ -49,4 +49,4 @@ slack_slash_command_lambda
       - `{ "from_cloud_watch": true }`
     - [참고](./img/cloudwatch_event.jpg)
 - 메시지 포멧
-  - 원하는 모양의 결과를 얻으려면 슬랙의 메시지 포멧을 [참고](https://api.slack.com/docs/messages)하면 된다
+  - 원하는 모양의 결과를 얻으려면 슬랙의 메시지 포멧을 [참고](https://api.slack.com/docs/messages)한다
