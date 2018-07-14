@@ -16,11 +16,11 @@ API Gateway 생성
 - API 를 생성하고 리소스를 생성한다
 - `POST` 메서드를 생성하고, 람다를 통합 포인트로 선택한다
   - [참고](./img/create_api_gateway.jpg)
-- `통합 요청`의 `본문 매핑 템플릿`의 `매핑 템플릿 추가(정의된 템플릿이 없는 경우)`를 누른다
+- `통합 요청`의 `매핑 템플릿`의 `매핑 템플릿 추가(정의된 템플릿이 없는 경우)`를 누른다
 - `Content-Type`에 `application/x-www-form-urlencoded`를 입력하고, [코드](/src/apigateway_integration_request/apigateway_integration_request.txt)를 붙여넣어 저장한다
   - 슬랙이 보내는 데이터를 람다가 처리할 수 있도록 변환한다
   - [참고](./img/api_gateway_post_integration_request.jpg)
-- `통합 응답`의 `본문 매핑 템플릿`의 `application/json` 항목에 `#set($inputRoot = $input.path('$'))` 를 추가한다
+- `통합 응답`의 `매핑 템플릿`의 `application/json` 항목에 `#set($inputRoot = $input.path('$'))` 를 추가한다
   - 람다에서 리턴하는 메시지를 슬랙에서 보이지 않도록 하기 위한 것으로 생략해도 된다
     - 슬랙에서 명령은 보이지 않고, 결과만 보이게 하고 싶은 경우에 사용한다
   - [참고](./img/api_gateway_post_integration_response.jpg)
