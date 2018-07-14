@@ -59,6 +59,8 @@ exports.handler = function(event, context, end) {
                 CACHE[file] = require(file);
             }
         });
+
+        end(null, null);
         return;
     }
 
